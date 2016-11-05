@@ -15,3 +15,4 @@ cd /data/golr-loader && java -Xmx50G -Dlog4j.configuration=file:/data/log4j.prop
 /data/solr-6.2.1/bin/solr stop
 cd /data/solr-6.2.1/server/solr && tar czfv feature-location.tgz feature-location/
 cp /data/solr-6.2.1/server/solr/feature-location.tgz /solr
+cp -r /data/json /solr
