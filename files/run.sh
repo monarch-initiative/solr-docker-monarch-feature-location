@@ -13,6 +13,6 @@ mkdir -p /data/json
 /data/solr-6.2.1/bin/solr start
 cd /data/golr-loader && java -Xmx100G -Dlogback.configurationFile=file:/data/logback.xml -jar target/golr-loader-0.0.1-SNAPSHOT.jar -g /data/graph.yaml -q /data/monarch-cypher-queries/src/main/cypher/feature-location -o /data/json/ -s http://localhost:8983/solr/feature-location
 /data/solr-6.2.1/bin/solr stop
-cd /data/solr-6.2.1/server/solr && tar czfv feature-location.tgz feature-location/
-cp /data/solr-6.2.1/server/solr/feature-location.tgz /solr
+cd /data/solr-6.2.1/server/solr && tar czfv feature-location.tar feature-location/
+cp /data/solr-6.2.1/server/solr/feature-location.tar /solr
 cp -r /data/json /solr
