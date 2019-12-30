@@ -6,7 +6,7 @@ set -e
 /data/solr-6.2.1/bin/solr create -c feature-location
 /data/solr-6.2.1/bin/solr stop
 rm /data/solr-6.2.1/server/solr/feature-location/conf/managed-schema
-cd /data/golr-schema && mvn exec:java -Dexec.mainClass="org.bbop.cli.Main" -Dexec.args="-c /data/monarch-app/conf/golr-views/feature-location-config.yaml -o /data/solr-6.2.1/server/solr/feature-location/conf/schema.xml"
+cd /data/golr-schema && mvn exec:java -Dexec.mainClass="org.bbop.cli.Main" -Dexec.args="-c /data/feature-location-config.yaml -o /data/solr-6.2.1/server/solr/feature-location/conf/schema.xml"
 wget -O /data/scigraph.tgz http://scigraph-data-dev.monarchinitiative.org/static_files/scigraph.tgz
 cd /data/ && tar xzfv scigraph.tgz
 mkdir -p /data/json
